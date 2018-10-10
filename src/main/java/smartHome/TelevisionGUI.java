@@ -18,6 +18,8 @@
  */
 package smartHome;
 
+import java.awt.event.ItemEvent;
+
 /**
  *
  * @author Han
@@ -26,7 +28,10 @@ public class TelevisionGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form SpeakerGUI
-     */    
+     */ 
+    
+    public static boolean check=true;
+    
     public TelevisionGUI(){
         initComponents();
         setVisible(true);
@@ -54,6 +59,12 @@ public class TelevisionGUI extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(450, 300));
         getContentPane().setLayout(null);
+
+        PowerButton.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                itemStateChanged(evt);
+            }
+        });
         getContentPane().add(PowerButton);
         PowerButton.setBounds(540, 280, 98, 40);
 
@@ -81,7 +92,7 @@ public class TelevisionGUI extends javax.swing.JFrame {
         VolumeSlider.setOrientation(javax.swing.JSlider.VERTICAL);
         VolumeSlider.setName("VolumeSlider"); // NOI18N
         getContentPane().add(VolumeSlider);
-        VolumeSlider.setBounds(170, 90, 51, 200);
+        VolumeSlider.setBounds(190, 90, 51, 200);
 
         VolumeLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         VolumeLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -92,6 +103,13 @@ public class TelevisionGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void itemStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_itemStateChanged
+        // TODO add your handling code here:
+        check=!check;
+        if(check) jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/off.jpg")));
+        else jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_1maxresdefault.jpg")));
+    }//GEN-LAST:event_itemStateChanged
     public javax.swing.JToggleButton getPowerButton(){
         return PowerButton;
     }
