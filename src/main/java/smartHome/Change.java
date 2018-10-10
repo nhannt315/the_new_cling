@@ -51,7 +51,7 @@ public class Change extends TelevisionGUI{
     private boolean power = false;    
     @UpnpStateVariable(defaultValue = "0")
     private int volume = 0;
-    @UpnpAction// đây là hàm set bật tắt cái Speaker:
+    @UpnpAction// đây là hàm set bật tắt cái Television:
     public void setPower(@UpnpInputArgument(name = "NewPowerValue")
                           boolean newPowerValue) {
         power = newPowerValue;

@@ -27,7 +27,7 @@ import java.awt.event.ItemEvent;
 public class TelevisionGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form SpeakerGUI
+     * Creates new form TelevisionGUI
      */ 
     
     public static boolean check=true;

@@ -134,16 +134,16 @@ public class Television implements Runnable {
         throws ValidationException, LocalServiceBindingException, IOException {
         DeviceIdentity identity =
                 new DeviceIdentity(
-                        UDN.uniqueSystemIdentifier("Demo Speaker")
+                        UDN.uniqueSystemIdentifier("Demo Television")
                 );
         DeviceType type =
-                new UDADeviceType("SpeakerType", 1);
+                new UDADeviceType("TelevisionType", 1);
         DeviceDetails details =
                 new DeviceDetails(
-                        "Speaker By Hero",
+                        "Television By Hero",
                         new ManufacturerDetails("HERO"),
                         new ModelDetails(
-                                "Speaker2017",
+                                "Television2017",
                                 "A demo speaker with on/off volume.",
                                 "v1"
                         )
