@@ -36,7 +36,7 @@
     <Component class="javax.swing.JToggleButton" name="PowerButton">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1180" y="610" width="98" height="40"/>
+          <AbsoluteConstraints x="540" y="280" width="98" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -66,13 +66,13 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maxresdefault.jpg"/>
+          <Image iconType="3" name="/rsz_1maxresdefault.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="1300" height="720"/>
+          <AbsoluteConstraints x="0" y="0" width="640" height="360"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -83,7 +83,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="350" y="380" width="51" height="200"/>
+          <AbsoluteConstraints x="170" y="90" width="51" height="200"/>
         </Constraint>
       </Constraints>
     </Component>

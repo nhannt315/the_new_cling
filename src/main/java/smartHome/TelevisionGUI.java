@@ -30,7 +30,7 @@ public class TelevisionGUI extends javax.swing.JFrame {
     public TelevisionGUI(){
         initComponents();
         setVisible(true);
-        setSize(1280,720);
+        setSize(640,360);
     }
 
     /**
@@ -55,7 +55,7 @@ public class TelevisionGUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(450, 300));
         getContentPane().setLayout(null);
         getContentPane().add(PowerButton);
-        PowerButton.setBounds(1180, 610, 98, 40);
+        PowerButton.setBounds(540, 280, 98, 40);
 
         jPanel1.setOpaque(false);
 
@@ -73,15 +73,15 @@ public class TelevisionGUI extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(310, 20, 50, 230);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maxresdefault.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_1maxresdefault.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1300, 720);
+        jLabel1.setBounds(0, 0, 640, 360);
 
         VolumeSlider.setOrientation(javax.swing.JSlider.VERTICAL);
         VolumeSlider.setName("VolumeSlider"); // NOI18N
         getContentPane().add(VolumeSlider);
-        VolumeSlider.setBounds(350, 380, 51, 200);
+        VolumeSlider.setBounds(170, 90, 51, 200);
 
         VolumeLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         VolumeLabel.setForeground(new java.awt.Color(255, 255, 255));
