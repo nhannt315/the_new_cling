@@ -29,9 +29,7 @@ public class TelevisionGUI extends javax.swing.JFrame {
     /**
      * Creates new form TelevisionGUI
      */ 
-    
-    public static boolean check=true;
-    
+        
     public TelevisionGUI(){
         initComponents();
         setVisible(true);
@@ -84,32 +82,35 @@ public class TelevisionGUI extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(310, 20, 50, 230);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_1maxresdefault.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/off.jpg")));
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 640, 360);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/off.jpg")));
+        jLabel1.setLayout(null);
         
         VolumeSlider.setOrientation(javax.swing.JSlider.VERTICAL);
         VolumeSlider.setName("VolumeSlider"); // NOI18N
-        getContentPane().add(VolumeSlider);
-        VolumeSlider.setBounds(190, 90, 51, 200);
+        jLabel1.add(VolumeSlider);
+        VolumeSlider.setBounds(190, 70, 51, 200);
 
-        VolumeLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        VolumeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        VolumeLabel.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
+        VolumeLabel.setForeground(new java.awt.Color(59, 255, 0));
         VolumeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         VolumeLabel.setText("70");
-        getContentPane().add(VolumeLabel);
-        VolumeLabel.setBounds(350, 580, 51, 20);
+        jLabel1.add(VolumeLabel);
+        VolumeLabel.setBounds(190, 275, 51, 20);
+        
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void itemStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_itemStateChanged
         // TODO add your handling code here:
-        check=!check;
-        if(check) jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/off.jpg")));
+        if(PowerButton.isSelected() == false) jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/off.jpg")));
         else jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_1maxresdefault.jpg")));
+        jLabel1.repaint();
+        VolumeLabel.repaint();
+        VolumeSlider.repaint();
     }//GEN-LAST:event_itemStateChanged
     public javax.swing.JToggleButton getPowerButton(){
         return PowerButton;

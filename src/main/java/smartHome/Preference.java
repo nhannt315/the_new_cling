@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class Preference {
 
-    public static final String PATH = "/Users/nhannt/eclipse-workspace/the_new_cling/src/main/java/smartHome";
+    public static final String PATH = "/home/hoang/Documents/the_new_cling/src/main/java/smartHome";
 
     public static void saveSettingFile(List<Map<String, Object>> listMap) {
         try {
