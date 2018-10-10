@@ -88,7 +88,8 @@ public class TelevisionGUI extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 640, 360);
-
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/off.jpg")));
+        
         VolumeSlider.setOrientation(javax.swing.JSlider.VERTICAL);
         VolumeSlider.setName("VolumeSlider"); // NOI18N
         getContentPane().add(VolumeSlider);
