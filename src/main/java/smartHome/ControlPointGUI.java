@@ -84,6 +84,7 @@ public class ControlPointGUI extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         STextField = new javax.swing.JTextField();
         DTextField = new javax.swing.JTextField();
+        cbSave = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ControlPoint");
@@ -191,6 +192,11 @@ public class ControlPointGUI extends javax.swing.JFrame {
         jScrollPane3.setViewportView(ListArea);
 
         SCheckBox.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        SCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SCheckBoxActionPerformed(evt);
+            }
+        });
 
         SetButton.setBackground(new java.awt.Color(0, 204, 102));
         SetButton.setText("SET");
@@ -222,6 +228,13 @@ public class ControlPointGUI extends javax.swing.JFrame {
         jLabel8.setText("THEN");
 
         STextField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        cbSave.setText("Save");
+        cbSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -273,9 +286,6 @@ public class ControlPointGUI extends javax.swing.JFrame {
                                         .addComponent(DTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(309, 309, 309)
-                        .addComponent(jLabel7))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(282, 282, 282)
                         .addComponent(jLabel8))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -284,12 +294,20 @@ public class ControlPointGUI extends javax.swing.JFrame {
                         .addGap(114, 114, 114)
                         .addComponent(UnSetButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(309, 309, 309)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cbSave)
+                .addGap(58, 58, 58))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbSave))
+                .addGap(8, 8, 8)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -322,7 +340,7 @@ public class ControlPointGUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SetButton)
                     .addComponent(UnSetButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
         );
@@ -352,6 +370,14 @@ public class ControlPointGUI extends javax.swing.JFrame {
     private void SetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SetButtonActionPerformed
+
+    private void cbSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbSaveActionPerformed
+
+    private void SCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SCheckBoxActionPerformed
         
     public javax.swing.JComboBox getDeviceBox(){return DeviceBox;}
     public javax.swing.JComboBox getServiceBox(){return ServiceBox;}
@@ -364,6 +390,7 @@ public class ControlPointGUI extends javax.swing.JFrame {
     public javax.swing.JTextArea getInfoArea(){return InfoArea;}
     public javax.swing.JTextArea getResultArea(){return ResultArea;}
     
+    public javax.swing.JCheckBox getCbSave(){return cbSave;}
     public javax.swing.JCheckBox getDCheckBox(){return DCheckBox;}
     public javax.swing.JComboBox<String> getDDeviceBox(){return DDeviceBox;}
     public javax.swing.JComboBox<String> getDServiceBox(){return DServiceBox;}
@@ -450,6 +477,7 @@ public class ControlPointGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox ValueCheckBox;
     private javax.swing.JSpinner ValueSpinner;
     private javax.swing.JTextField ValueTextField;
+    private javax.swing.JCheckBox cbSave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

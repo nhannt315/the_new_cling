@@ -35,7 +35,6 @@ public class Preference {
         }
     }
     
-    
 
     public static List<Map<String, Object>> readSettingFile() {
         List<Map<String, Object>> listMap = new ArrayList<Map<String, Object>>();
@@ -49,5 +48,33 @@ public class Preference {
             System.out.println(e.getMessage());
         }
         return listMap;
+    }
+    
+    
+    public static void savePref(Boolean isSave){
+       try {
+            File file = new File(PATH + "/save.ser");
+            FileOutputStream fout = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fout);
+            oos.writeObject(isSave);
+            oos.close();
+            fout.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } 
+    }
+    
+    public static Boolean readPref(){
+        Boolean isSave = false;
+        try {
+            File file = new File(PATH + "/save.ser");
+            FileInputStream fi = new FileInputStream(file);
+            ObjectInputStream oi = new ObjectInputStream(fi);
+
+            isSave = (Boolean) oi.readObject();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return isSave;
     }
 }
