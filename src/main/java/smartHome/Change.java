@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
         serviceId = @UpnpServiceId("Change"),
         serviceType = @UpnpServiceType(value = "Change", version = 1)
 )
-public class Change extends SpeakerGUI{
+public class Change extends TelevisionGUI{
     private final PropertyChangeSupport propertyChangeSupport;
     private final javax.swing.JToggleButton powerButton;
     private final javax.swing.JSlider volumeSlider;
