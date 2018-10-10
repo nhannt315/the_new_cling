@@ -30,6 +30,7 @@ public class ControlPointGUI extends javax.swing.JFrame {
     public ControlPointGUI() {
         initComponents();
         setVisible(true);
+        setSize(1000,600);
     }
 
     /**
