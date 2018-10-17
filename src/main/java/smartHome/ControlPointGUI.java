@@ -214,13 +214,13 @@ public class ControlPointGUI extends javax.swing.JFrame {
 
         jLabel2.setText("Service");
 
-        jLabel3.setText("StateVariable");
+        jLabel3.setText("Action");
 
         jLabel4.setText("Device");
 
         jLabel5.setText("Service");
 
-        jLabel6.setText("StateVariable");
+        jLabel6.setText("Action");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setText("IF");
